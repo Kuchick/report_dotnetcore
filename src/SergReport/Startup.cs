@@ -54,11 +54,10 @@ namespace SergReport
         {
 
             var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath) //Необходимо указать относительный путь, для того чтобы приложение нашло наш файл в корне проекта
-                //а не в папке со скомпилированным кодом.
+                .SetBasePath(env.ContentRootPath)
                 .AddInMemoryCollection(new Dictionary<string, string>
                 {
-                    {"Message","Hello from memory!" }
+                    {"message","Hello from memory!!!" }
                 })
                 .AddJsonFile("conf.json");
 
@@ -93,7 +92,6 @@ namespace SergReport
             MyAppConfig = builder.Build();
         }
 
-        //Созданный нами метод для вывода всего файла конфигурации в качестве ответа в человеко-читаемом виде
         private string GetSectionContent(IConfiguration configSection)
         {
             string sectionContent = "";
@@ -122,7 +120,7 @@ namespace SergReport
         }
         /* */
         
-         //   /*
+        //    /*
         ///////////////////////////////////////////////////// **4**
         public Startup(IHostingEnvironment env)
         {

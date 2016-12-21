@@ -3,7 +3,7 @@
     "Microsoft.Extensions.Configuration": "*",
     "Microsoft.Extensions.Configuration.Json": "*",
     "Microsoft.NETCore.App": {
-      "version": "1.0.1",
+      "version": "*",
       "type": "platform"
     },
     "Microsoft.AspNetCore.Diagnostics": "1.0.0",
